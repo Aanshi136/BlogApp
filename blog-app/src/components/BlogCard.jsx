@@ -1,6 +1,8 @@
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 const BlogCard = ({ blog, onEdit, onDelete }) => {
+  // const formattedContent = blog.content.replace(/\n/g, " ");
+
   return (
     <div className="p-4 bg-cardBg shadow-md rounded-lg">
       <div className="flex justify-between items-center">
@@ -17,13 +19,13 @@ const BlogCard = ({ blog, onEdit, onDelete }) => {
             onClick={() => onDelete(blog.id)}
             className="text-btn hover:text-primary cursor-pointer"
           >
-            <FaTrash size={16 } />
+            <FaTrash size={16} />
           </button>
         </div>
       </div>
 
       <p className="text-btn">by {blog.name}</p>
-      <p className="mt-2 text-btn">{blog.content}</p>
+      <p className="mt-2 text-btn whitespace-break-spaces">{blog.content}</p>
     </div>
   );
 };

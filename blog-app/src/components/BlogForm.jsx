@@ -34,7 +34,7 @@ const BlogForm = ({ addBlog,  existingBlog }) => {
       <form onSubmit={handleSubmit}  className="space-y-4">
         <input
           type="text"
-          placeholder="Name"
+          placeholder=" Author Name"
           
           className="w-full p-2 border "
           value={name}
